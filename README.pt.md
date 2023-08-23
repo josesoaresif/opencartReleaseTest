@@ -9,8 +9,7 @@ Download de versões da extensão Ifthenpay para Opencart
 | Link para descarregar instalador .ocmod.zip | [ifthenpay v1.3.5]()               | [ifthenpay v4.0.0]()               |
 
 # Módulo de pagamentos Ifthenpay Opencart 4
-
-Ler em ![Português](https://github.com/ifthenpay/opencart/raw/assets/assets/img/pt.png) [Português](README.pt.md), e ![Inglês](https://github.com/ifthenpay/opencart/raw/assets/assets/img/en.png) [Inglês](README.md)
+Ler em ![Português](https://github.com/josesoaresif/opencartReleaseTest/raw/assets/version4/assets/pt.png) [Português](README.pt.md), e ![Inglês](https://github.com/josesoaresif/opencartReleaseTest/raw/assets/version4/assets/en.png) [Inglês](README.md)
 
 [1. Introdução](#introdução)
 
@@ -95,27 +94,27 @@ Use a tabela abaixo para verificar a compatibilidade do módulo Ifthenpay com a 
 
 
 Descarregue o ficheiro de instalação da extensão Ifthenpay para Opencart 4 na página do github [ifthenpay v4.0.0](TODO).
-![img](https://github.com/ifthenpay/opencart/raw/assets/opencart4/assets/img/github_release_download.png)
+![img](https://github.com/josesoaresif/opencartReleaseTest/raw/assets/version4/assets/github_release_download.png)
 </br>
 
 Aceda ao backoffice da sua loja online e escolha Extensões (1) -> Instalador (2), e clique em Upload (3).
 
-![img](https://github.com/ifthenpay/opencart/raw/assets/opencart4/assets/img/upload_ocmodzip.png)
+![img](https://github.com/josesoaresif/opencartReleaseTest/raw/assets/version4/assets/upload_ocmodzip.png)
 </br>
 
 Selecione o ficheiro .ocmod.zip (1) que descarregou anteriormente, e clique em abrir (2).
 
-![img](https://github.com/ifthenpay/opencart/raw/assets/opencart4/assets/img/select_ocmodzip.png)
+![img](https://github.com/josesoaresif/opencartReleaseTest/raw/assets/version4/assets/select_ocmodzip.png)
 </br>
 
 Se o upload for bem-sucedido, será exibida uma mensagem de sucesso e o módulo será listado no grupo de extensões instaladas, mas apenas carregou a extensão, ainda necessita de instalar esta, par tal clique no botão de instalar (1).
 
-![img](https://github.com/ifthenpay/opencart/raw/assets/opencart4/assets/img/ocmodzip_uploaded.png)
+![img](https://github.com/josesoaresif/opencartReleaseTest/raw/assets/version4/assets/ocmodzip_uploaded.png)
 </br>
 
 Se a instalação for bem-sucedida, será exibida uma mensagem de sucesso e o botão de instalar mudará de cor para laranja.
 
-![img](https://github.com/ifthenpay/opencart/raw/assets/opencart4/assets/img/ocmodzip_installed.png)
+![img](https://github.com/josesoaresif/opencartReleaseTest/raw/assets/version4/assets/ocmodzip_installed.png)
 </br>
 
 
@@ -123,12 +122,12 @@ Após instalar a extensão, é necessário instalar os métodos de pagamento que
 
 Escolha Extensões (1) -> Extensões (2) -> Payments (3).
 
-![img](https://github.com/ifthenpay/opencart/raw/assets/opencart4/assets/img/extensions_payments.png)
+![img](https://github.com/josesoaresif/opencartReleaseTest/raw/assets/version4/assets/extensions_payments.png)
 </br>
 
 Clique em "Install" (1) no método de pagamento que pretende disponibilizar na sua loja online (exemplo Multibanco).
 
-![img](https://github.com/ifthenpay/opencart/raw/assets/opencart4/assets/img/install_method.png)
+![img](https://github.com/josesoaresif/opencartReleaseTest/raw/assets/version4/assets/install_method.png)
 </br>
 
 # Configuração
@@ -137,7 +136,7 @@ Após instalar o método de pagamento, é necessário configurar este com os dad
 
 Click em "Editar" (1) no método de pagamento que pretende configurar (exemplo Multibanco).
 
-![img](https://github.com/ifthenpay/opencart/raw/assets/opencart4/assets/img/click_configure.png)
+![img](https://github.com/josesoaresif/opencartReleaseTest/raw/assets/version4/assets/click_configure.png)
 </br>
 
 
@@ -148,7 +147,7 @@ A Chave Backoffice é dada na conclusão do contrato e é constituída por conju
 Abaixo é apresentado o exemplo do Multibanco, esta ação é igual para os restantes métodos de pagamento.
 Introduza a Chave de Backoffice (1) e clique em salvar (2), a página irá carregar novamente apresentando o formulário de configuração.
 
-![img](https://github.com/ifthenpay/opencart/raw/assets/opencart4/assets/img/config_save_backofficekey.png)
+![img](https://github.com/josesoaresif/opencartReleaseTest/raw/assets/version4/assets/config_save_backofficekey.png)
 </br>
 
 
@@ -174,7 +173,7 @@ Configure o método de pagamento, a imagem abaixo mostra um exemplo de configura
 
 Clicar em salvar (14) para guardar as alterações.
 
-![img](https://github.com/ifthenpay/opencart/raw/assets/opencart4/assets/img/config_multibanco.png)
+![img](https://github.com/josesoaresif/opencartReleaseTest/raw/assets/version4/assets/config_multibanco.png)
 </br>
 
 
@@ -196,7 +195,7 @@ Exemplos de validades:
 
 Clicar em salvar (4) para guardar as alterações.
 
-![img](https://github.com/ifthenpay/opencart/raw/assets/opencart4/assets/img/config_multibanco_dynamic.png)
+![img](https://github.com/josesoaresif/opencartReleaseTest/raw/assets/version4/assets/config_multibanco_dynamic.png)
 </br>
 
 
@@ -224,7 +223,7 @@ Configure o método de pagamento, a imagem abaixo mostra um exemplo de configura
 
 Clicar em salvar (16) para guardar as alterações.
 
-![img](https://github.com/ifthenpay/opencart/raw/assets/opencart4/assets/img/config_mbway.png)
+![img](https://github.com/josesoaresif/opencartReleaseTest/raw/assets/version4/assets/config_mbway.png)
 </br>
 
 
@@ -249,7 +248,7 @@ Configure o método de pagamento, a imagem abaixo mostra um exemplo de configura
 
 Clicar em salvar (13) para guardar as alterações.
 
-![img](https://github.com/ifthenpay/opencart/raw/assets/opencart4/assets/img/config_ccard.png)
+![img](https://github.com/josesoaresif/opencartReleaseTest/raw/assets/version4/assets/config_ccard.png)
 </br>
 
 
@@ -276,7 +275,7 @@ Configure o método de pagamento, a imagem abaixo mostra um exemplo de configura
 
 Clicar em salvar (14) para guardar as alterações.
 
-![img](https://github.com/ifthenpay/opencart/raw/assets/opencart4/assets/img/config_payshop.png)
+![img](https://github.com/josesoaresif/opencartReleaseTest/raw/assets/version4/assets/config_payshop.png)
 </br>
 
 
@@ -288,40 +287,40 @@ Para devolver o valor pago pelo consumidor, é necessário que o método de paga
 Para proceder à devolução do valor pago pelo consumidor, aceda à página de encomendas e clique em detalhes da encomenda desejada.
 (Os passos seguintes são iguais para os métodos de pagamento MB WAY e Cartão de Crédito)
 
-![img](https://github.com/ifthenpay/opencart/raw/assets/opencart4/assets/img/sales_orders.png)
+![img](https://github.com/josesoaresif/opencartReleaseTest/raw/assets/version4/assets/sales_orders.png)
 </br>
 
 No painel do Histórico de encomenda, clique na tab de Reembolso (1).
 
-![img](https://github.com/ifthenpay/opencart/raw/assets/opencart4/assets/img/order_history.png)
+![img](https://github.com/josesoaresif/opencartReleaseTest/raw/assets/version4/assets/order_history.png)
 </br>
 
 1. Preencha o valor a reembolsar, este valor não pode ser superior ao valor da encomenda;
 2. (opcional) Preencha a descrição do reembolso, esta descrição apenas é visível no backoffice da loja e pode ser usada para registar o motivo do reembolso;
 3. Clique em Reembolsar Pagamento para prosseguir com o reembolso.
 
-![img](https://github.com/ifthenpay/opencart/raw/assets/opencart4/assets/img/refund_form.png)
+![img](https://github.com/josesoaresif/opencartReleaseTest/raw/assets/version4/assets/refund_form.png)
 </br>
 
 
 Clique em Confirmar (1).
 
-![img](https://github.com/ifthenpay/opencart/raw/assets/opencart4/assets/img/refund_confirm.png)
+![img](https://github.com/josesoaresif/opencartReleaseTest/raw/assets/version4/assets/refund_confirm.png)
 </br>
 
 
 Será enviado um email com um token de segurança (1) para o email do utilizador administrador da loja online que iniciou a devolução.
 
-![img](https://github.com/ifthenpay/opencart/raw/assets/opencart4/assets/img/refund_token_mail.png)
+![img](https://github.com/josesoaresif/opencartReleaseTest/raw/assets/version4/assets/refund_token_mail.png)
 </br>
 
 Introduza o token de segurança recebido no email (1) e clique em Confirmar (2).
 
-![img](https://github.com/ifthenpay/opencart/raw/assets/opencart4/assets/img/refund_confirm_token.png)
+![img](https://github.com/josesoaresif/opencartReleaseTest/raw/assets/version4/assets/refund_confirm_token.png)
 </br>
 
 Após o sucesso da operação de reembolso, o painel de reembolso será atualizado com o valor total reembolsado (1), e com um histórico de reembolsos (2). O formulário de reembolso será desabilitado (3) assim que o total reembolsado atingir o valor total da encomenda.
-![img](https://github.com/ifthenpay/opencart/raw/assets/opencart4/assets/img/refund_panel_after.png)
+![img](https://github.com/josesoaresif/opencartReleaseTest/raw/assets/version4/assets/refund_panel_after.png)
 </br>
 
 A valor selecionado será devolvido ao consumidor e o estado da encomenda será atualizado para Reembolsado. 
@@ -336,17 +335,17 @@ Se já tem uma conta Ifthenpay, mas não tem contratou um método de pagamento q
 O tempo de resposta para este pedido é de 1 a 2 dias úteis, com a exceção do método de pagamento por Cartão de Crédito que pode exceder este tempo por ser necessário validação.
 Para requerer a criação de uma conta adicional, aceda à página de configurações do método de pagamento que pretende contratar e clique em Requerer nova conta (1).
 
-![img](https://github.com/ifthenpay/opencart/raw/assets/opencart4/assets/img/request_account.png)
+![img](https://github.com/josesoaresif/opencartReleaseTest/raw/assets/version4/assets/request_account.png)
 </br>
 
 No caso de já possuir uma conta Multibanco de referências estáticas e necessitar de uma conta para Multibanco com Referências Dinâmicas, poderá faze-lo na página de configuração do Multibanco clicando no botão de Requerer conta multibanco dinâmica (1) no fundo da página.
 
-![img](https://github.com/ifthenpay/opencart/raw/assets/opencart4/assets/img/request_account_multibanco_dynamic.png)
+![img](https://github.com/josesoaresif/opencartReleaseTest/raw/assets/version4/assets/request_account_multibanco_dynamic.png)
 </br>
 
 Ao clicar em requerer nova conta exibirá uma caixa de dialogo na qual pode confirmar a ação clicando em OK (1).
 
-![img](https://github.com/ifthenpay/opencart/raw/assets/opencart4/assets/img/confirm_request_account.png)
+![img](https://github.com/josesoaresif/opencartReleaseTest/raw/assets/version4/assets/confirm_request_account.png)
 </br>
 
 Assim, a equipa da Ifthenpay adicionará o método de pagamento à sua conta, atualizando a lista de métodos de pagamento disponíveis no seu módulo.
@@ -366,12 +365,12 @@ Na configuração do método de pagamento selecionado, clique no botão Limpar C
 
 **Atenção, esta ação irá limpar as atuais configurações do método de pagamento**;
 
-![img](https://github.com/ifthenpay/opencart/raw/assets/opencart4/assets/img/clear_configuration.png)
+![img](https://github.com/josesoaresif/opencartReleaseTest/raw/assets/version4/assets/clear_configuration.png)
 </br>
 
 Após limpar a chave de backoffice, ser-lhe-á mais uma vez pedido para inserir a Chave Backoffice;
 
-![img](https://github.com/ifthenpay/opencart/raw/assets/opencart4/assets/img/cleared_configuration.png)
+![img](https://github.com/josesoaresif/opencartReleaseTest/raw/assets/version4/assets/cleared_configuration.png)
 </br>
 
 
@@ -387,7 +386,7 @@ Após salvar as configurações, é executado o processo de associação da sua 
 
 Após ativar o Callback não necessita de tomar mais nenhuma ação, o Callback está ativo e a funcionar.
 
-![img](https://github.com/ifthenpay/opencart/raw/assets/opencart4/assets/img/callback.png)
+![img](https://github.com/josesoaresif/opencartReleaseTest/raw/assets/version4/assets/callback.png)
 </br>
 
 
@@ -397,40 +396,40 @@ Em cada página de configuração de um método de pagamento (excepto Cartão de
 
 **Multibanco**: No backoffice, use os seguintes dados (1) e (2) dos detalhes de pagamento de encomenda
 
-![img](https://github.com/ifthenpay/opencart/raw/assets/opencart4/assets/img/test_callback_data_multibanco.png)
+![img](https://github.com/josesoaresif/opencartReleaseTest/raw/assets/version4/assets/test_callback_data_multibanco.png)
 </br>
 
 
 e introduza-os nos respetivos campos (1) e (2) do formulário de teste de callback e clique em Testar (3).
 Nota: a referência Multibanco deve ser inserida sem espaços e o valor, se tiver casas decimais, deve ser separado por um ponto.
 
-![img](https://github.com/ifthenpay/opencart/raw/assets/opencart4/assets/img/test_callback_form_multibanco.png)
+![img](https://github.com/josesoaresif/opencartReleaseTest/raw/assets/version4/assets/test_callback_form_multibanco.png)
 </br>
 
 
 **MB WAY**: No backoffice, use os seguintes dados (1) e (2) dos detalhes de pagamento de encomenda
 
-![img](https://github.com/ifthenpay/opencart/raw/assets/opencart4/assets/img/test_callback_data_payshop.png)
+![img](https://github.com/josesoaresif/opencartReleaseTest/raw/assets/version4/assets/test_callback_data_payshop.png)
 </br>
 
 
 e introduza-os nos respetivos campos (1) e (2) do formulário de teste de callback e clique em Testar (3).
 Nota: o valor, se tiver casas decimais, deve ser separado por um ponto.
 
-![img](https://github.com/ifthenpay/opencart/raw/assets/opencart4/assets/img/test_callback_form_payshop.png)
+![img](https://github.com/josesoaresif/opencartReleaseTest/raw/assets/version4/assets/test_callback_form_payshop.png)
 </br>
 
 
 **Payshop**: No backoffice, use os seguintes dados (1) e (2) dos detalhes de pagamento de encomenda
 
-![img](https://github.com/ifthenpay/opencart/raw/assets/opencart4/assets/img/test_callback_data_payshop.png)
+![img](https://github.com/josesoaresif/opencartReleaseTest/raw/assets/version4/assets/test_callback_data_payshop.png)
 </br>
 
 
 e introduza-os nos respetivos campos (1) e (2) do formulário de teste de callback e clique em Testar (3).
 Nota: o valor, se tiver casas decimais, deve ser separado por um ponto.
 
-![img](https://github.com/ifthenpay/opencart/raw/assets/opencart4/assets/img/test_callback_form_payshop.png)
+![img](https://github.com/josesoaresif/opencartReleaseTest/raw/assets/version4/assets/test_callback_form_payshop.png)
 </br>
 
 
@@ -449,7 +448,7 @@ Um cronjob é uma tarefa programada que é executada automaticamente em interval
 Para ativar o cronjob, aceda à página de configuração do módulo e ative a opção Habilitar Cron job de Cancelar e salve.
 A página de configuração atualizará e apresentará a URL do cronjob (1), a qual deve ser adicionada ao seu servidor para que este execute o cronjob.
 
-![img](https://github.com/ifthenpay/opencart/raw/assets/opencart4/assets/img/cronjob_url.png)
+![img](https://github.com/josesoaresif/opencartReleaseTest/raw/assets/version4/assets/cronjob_url.png)
 </br>
 
 
@@ -473,18 +472,18 @@ Na página de checkout, após escolher o método de envio, o consumidor pode esc
 
 Selecionar o método de pagamento Multibanco (1) e clicar em Continuar (2).
 
-![img](https://github.com/ifthenpay/opencart/raw/assets/opencart4/assets/img/select_multibanco.png)
+![img](https://github.com/josesoaresif/opencartReleaseTest/raw/assets/version4/assets/select_multibanco.png)
 </br>
 
 Clicar em Confirmar Encomenda (1).
 
-![img](https://github.com/ifthenpay/opencart/raw/assets/opencart4/assets/img/confirm_order_multibanco.png)
+![img](https://github.com/josesoaresif/opencartReleaseTest/raw/assets/version4/assets/confirm_order_multibanco.png)
 </br>
 
 Será exibida a página de sucesso da encomenda, com a entidade, referência e o valor a pagar.
 Nota: no caso de attribuir uma conta Multibanco estática ou Multibanco com Referências Dinâmicas mas sem definir validade, não será exibido o tempo limite para pagamento.
 
-![img](https://github.com/ifthenpay/opencart/raw/assets/opencart4/assets/img/payment_return.png)
+![img](https://github.com/josesoaresif/opencartReleaseTest/raw/assets/version4/assets/payment_return.png)
 </br>
 
 
@@ -493,17 +492,17 @@ Nota: no caso de attribuir uma conta Multibanco estática ou Multibanco com Refe
 
 Selecionar o método de pagamento Payshop (1) e clicar em Continuar (2).
 
-![img](https://github.com/ifthenpay/opencart/raw/assets/opencart4/assets/img/select_payshop.png)
+![img](https://github.com/josesoaresif/opencartReleaseTest/raw/assets/version4/assets/select_payshop.png)
 </br>
 
 Clicar em Confirmar Encomenda (1).
 
-![img](https://github.com/ifthenpay/opencart/raw/assets/opencart4/assets/img/confirm_order_payshop.png)
+![img](https://github.com/josesoaresif/opencartReleaseTest/raw/assets/version4/assets/confirm_order_payshop.png)
 </br>
 
 Será exibida a página de sucesso da encomenda, com a referência, validade e o valor a pagar.
 
-![img](https://github.com/ifthenpay/opencart/raw/assets/opencart4/assets/img/payment_return_payshop.png)
+![img](https://github.com/josesoaresif/opencartReleaseTest/raw/assets/version4/assets/payment_return_payshop.png)
 </br>
 
 
@@ -513,52 +512,52 @@ Será exibida a página de sucesso da encomenda, com a referência, validade e o
 
 Selecionar o método de pagamento MB WAY (1) e clicar em Continuar (3).
 
-![img](https://github.com/ifthenpay/opencart/raw/assets/opencart4/assets/img/select_mbway.png)
+![img](https://github.com/josesoaresif/opencartReleaseTest/raw/assets/version4/assets/select_mbway.png)
 </br>
 
 Preencher o número de telemóvel (1) e clicar em Confirmar Encomenda (2).
 
-![img](https://github.com/ifthenpay/opencart/raw/assets/opencart4/assets/img/confirm_order_mbway.png)
+![img](https://github.com/josesoaresif/opencartReleaseTest/raw/assets/version4/assets/confirm_order_mbway.png)
 </br>
 
 No caso da configuração de Exibir Contagem estar ativa, será exibida a contagem decrescente do tempo limite para pagamento na página de sucesso da encomenda.
 
-![img](https://github.com/ifthenpay/opencart/raw/assets/opencart4/assets/img/payment_return_mbway.png)
+![img](https://github.com/josesoaresif/opencartReleaseTest/raw/assets/version4/assets/payment_return_mbway.png)
 </br>
 
 O contador atualizará automáticamente o estado do pagamento no caso de sucesso, rejeiçao (por parte do utilizador da App MB WAY), expiração do tempo limite ou erro.
 
 Em caso de sucesso será exibida a mensagem de sucesso.
 
-![img](https://github.com/ifthenpay/opencart/raw/assets/opencart4/assets/img/payment_return_mbway_success.png)
+![img](https://github.com/josesoaresif/opencartReleaseTest/raw/assets/version4/assets/payment_return_mbway_success.png)
 </br>
 
 Em caso de rejeição pelo utilizador será exibida a mensagem de rejeitado.
 
-![img](https://github.com/ifthenpay/opencart/raw/assets/opencart4/assets/img/payment_return_mbway_rejected.png)
+![img](https://github.com/josesoaresif/opencartReleaseTest/raw/assets/version4/assets/payment_return_mbway_rejected.png)
 </br>
 
 Em caso de expiração do tempo será exibida a mensagem de expirado.
 
-![img](https://github.com/ifthenpay/opencart/raw/assets/opencart4/assets/img/payment_return_mbway_timeout.png)
+![img](https://github.com/josesoaresif/opencartReleaseTest/raw/assets/version4/assets/payment_return_mbway_timeout.png)
 </br>
 
 
 Em caso de falha ao comunicar com a App MB WAY ou introdução de um número de telemóvel inválido, será exibida uma mensagem de erro.
 
-![img](https://github.com/ifthenpay/opencart/raw/assets/opencart4/assets/img/payment_return_mbway_error.png)
+![img](https://github.com/josesoaresif/opencartReleaseTest/raw/assets/version4/assets/payment_return_mbway_error.png)
 </br>
 
 
 Quando ocorre um erro ou atinge o tempo limite, ou recusa o pagamento na App MB WAY, o consumidor pode tentar novamente clicando em Reenviar notificação MB WAY.
 
-![img](https://github.com/ifthenpay/opencart/raw/assets/opencart4/assets/img/payment_return_mbway_resend.png)
+![img](https://github.com/josesoaresif/opencartReleaseTest/raw/assets/version4/assets/payment_return_mbway_resend.png)
 </br>
 
 
 Se na configuração do método de pagamento MB WAY estiver ativa a opção de não exibir o contador, o consumidor receberá uma notificação na App MB WAY, mas não será exibido o contador nem o botão de reenviar notificação na página de sucesso de encomenda.
 
-![img](https://github.com/ifthenpay/opencart/raw/assets/opencart4/assets/img/payment_return_mbway_no_countdown.png)
+![img](https://github.com/josesoaresif/opencartReleaseTest/raw/assets/version4/assets/payment_return_mbway_no_countdown.png)
 </br>
 
 
@@ -567,12 +566,12 @@ Se na configuração do método de pagamento MB WAY estiver ativa a opção de n
 
 Selecionar o método de pagamento Cartão de Crédito (1) e clicar em continuar (2).
 
-![img](https://github.com/ifthenpay/opencart/raw/assets/opencart4/assets/img/select_ccard.png)
+![img](https://github.com/josesoaresif/opencartReleaseTest/raw/assets/version4/assets/select_ccard.png)
 </br>
 
 Clicar em Confirmar Encomenda (1).
 
-![img](https://github.com/ifthenpay/opencart/raw/assets/opencart4/assets/img/confirm_order_ccard.png)
+![img](https://github.com/josesoaresif/opencartReleaseTest/raw/assets/version4/assets/confirm_order_ccard.png)
 </br>
 
 
@@ -580,12 +579,12 @@ Preencher os dados do cartão de crédito número do cartão (1), data de valida
 
 É possível voltar (6), regressando à página de checkout.
 
-![img](https://github.com/ifthenpay/opencart/raw/assets/opencart4/assets/img/gateway_ccard.png)
+![img](https://github.com/josesoaresif/opencartReleaseTest/raw/assets/version4/assets/gateway_ccard.png)
 </br>
 
 Após o pagamento ser processado, será exibida a página de sucesso da encomenda.
 
-![img](https://github.com/ifthenpay/opencart/raw/assets/opencart4/assets/img/payment_return.png)
+![img](https://github.com/josesoaresif/opencartReleaseTest/raw/assets/version4/assets/payment_return.png)
 </br>
 
 
