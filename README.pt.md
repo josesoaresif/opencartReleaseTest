@@ -118,13 +118,16 @@ Escolha Extensões (1) -> Extensões (2) -> Payments (3).
 
 Clique em "Install" (1) no método de pagamento que pretende disponibilizar na sua loja online (exemplo Multibanco).
 ![img](https://github.com/josesoaresif/opencartReleaseTest/raw/assets/version4/assets/install_method.png)
+
 </br>
+
 
 # Configuração
 
 Após instalar o método de pagamento, é necessário configurar este com os dados da sua conta Ifthenpay.
 Click em "Editar" (1) no método de pagamento que pretende configurar (exemplo Multibanco).
 ![img](https://github.com/josesoaresif/opencartReleaseTest/raw/assets/version4/assets/click_configure.png)
+
 </br>
 
 
@@ -135,6 +138,7 @@ A Chave Backoffice é dada na conclusão do contrato e é constituída por conju
 Abaixo é apresentado o exemplo do Multibanco, esta ação é igual para os restantes métodos de pagamento.
 Introduza a Chave de Backoffice (1) e clique em salvar (2), a página irá carregar novamente apresentando o formulário de configuração.
 ![img](https://github.com/josesoaresif/opencartReleaseTest/raw/assets/version4/assets/config_save_backofficekey.png)
+
 </br>
 
 
@@ -160,6 +164,7 @@ Configure o método de pagamento, a imagem abaixo mostra um exemplo de configura
 
 Clicar em salvar (14) para guardar as alterações.
 ![img](https://github.com/josesoaresif/opencartReleaseTest/raw/assets/version4/assets/config_multibanco.png)
+
 </br>
 
 
@@ -181,6 +186,7 @@ Exemplos de validades:
 
 Clicar em salvar (4) para guardar as alterações.
 ![img](https://github.com/josesoaresif/opencartReleaseTest/raw/assets/version4/assets/config_multibanco_dynamic.png)
+
 </br>
 
 
@@ -207,6 +213,7 @@ Configure o método de pagamento, a imagem abaixo mostra um exemplo de configura
 
 Clicar em salvar (16) para guardar as alterações.
 ![img](https://github.com/josesoaresif/opencartReleaseTest/raw/assets/version4/assets/config_mbway.png)
+
 </br>
 
 
@@ -230,6 +237,7 @@ Configure o método de pagamento, a imagem abaixo mostra um exemplo de configura
 
 Clicar em salvar (13) para guardar as alterações.
 ![img](https://github.com/josesoaresif/opencartReleaseTest/raw/assets/version4/assets/config_ccard.png)
+
 </br>
 
 
@@ -255,6 +263,7 @@ Configure o método de pagamento, a imagem abaixo mostra um exemplo de configura
 
 Clicar em salvar (14) para guardar as alterações.
 ![img](https://github.com/josesoaresif/opencartReleaseTest/raw/assets/version4/assets/config_payshop.png)
+
 </br>
 
 
@@ -295,7 +304,8 @@ Após o sucesso da operação de reembolso, o painel de reembolso será atualiza
 ![img](https://github.com/josesoaresif/opencartReleaseTest/raw/assets/version4/assets/refund_panel_after.png)
 </br>
 
-O valor selecionado será devolvido ao consumidor e o estado da encomenda será atualizado para Reembolsado. 
+O valor selecionado será devolvido ao consumidor e o estado da encomenda será atualizado para Reembolsado.
+
 </br>
 
 
@@ -321,6 +331,7 @@ Ao clicar em requerer nova conta exibirá uma caixa de dialogo na qual pode conf
 Assim, a equipa da Ifthenpay adicionará o método de pagamento à sua conta, atualizando a lista de métodos de pagamento disponíveis no seu módulo.
 
 IMPORTANTE: Ao pedir uma conta para o método de pagamento por Cartão de Crédito, a equipa da Ifthenpay irá contactá-lo para pedir mais informações sobre a sua loja online e o seu negócio antes de ativar o método de pagamento.
+
 </br>
 
 
@@ -340,6 +351,7 @@ Na configuração do método de pagamento selecionado, clique no botão Limpar C
 
 Após limpar a chave de backoffice, ser-lhe-á mais uma vez pedido para inserir a Chave Backoffice;
 ![img](https://github.com/josesoaresif/opencartReleaseTest/raw/assets/version4/assets/cleared_configuration.png)
+
 </br>
 
 
@@ -355,12 +367,15 @@ Após salvar as configurações, é executado o processo de associação da sua 
 Após ativar o Callback não necessita de tomar mais nenhuma ação, o Callback está ativo e a funcionar.
 
 ![img](https://github.com/josesoaresif/opencartReleaseTest/raw/assets/version4/assets/callback.png)
+
 </br>
 
 
 ## Testar Callback
 
 Em cada página de configuração de um método de pagamento (excepto Cartão de Crédito), pode testar a funcionalidade do Callback clicando no botão "Testar Callback". Esta ação irá simular um pagamento bem-sucedido para uma encomenda na sua loja, alterando o estado da mesma. Necessita que o Callback esteja ativo para ter accesso a esta funcionalidade.
+
+</br>
 
 **Multibanco**: No backoffice, use os seguintes dados (1) e (2) dos detalhes de pagamento de encomenda
 ![img](https://github.com/josesoaresif/opencartReleaseTest/raw/assets/version4/assets/test_callback_data_multibanco.png)
@@ -370,6 +385,7 @@ Em cada página de configuração de um método de pagamento (excepto Cartão de
 e introduza-os nos respetivos campos (1) e (2) do formulário de teste de callback e clique em Testar (3).
 Nota: a referência Multibanco deve ser inserida sem espaços e o valor, se tiver casas decimais, deve ser separado por um ponto.
 ![img](https://github.com/josesoaresif/opencartReleaseTest/raw/assets/version4/assets/test_callback_form_multibanco.png)
+
 </br>
 
 
@@ -381,6 +397,7 @@ Nota: a referência Multibanco deve ser inserida sem espaços e o valor, se tive
 e introduza-os nos respetivos campos (1) e (2) do formulário de teste de callback e clique em Testar (3).
 Nota: o valor, se tiver casas decimais, deve ser separado por um ponto.
 ![img](https://github.com/josesoaresif/opencartReleaseTest/raw/assets/version4/assets/test_callback_form_payshop.png)
+
 </br>
 
 
@@ -392,6 +409,7 @@ Nota: o valor, se tiver casas decimais, deve ser separado por um ponto.
 e introduza-os nos respetivos campos (1) e (2) do formulário de teste de callback e clique em Testar (3).
 Nota: o valor, se tiver casas decimais, deve ser separado por um ponto.
 ![img](https://github.com/josesoaresif/opencartReleaseTest/raw/assets/version4/assets/test_callback_form_payshop.png)
+
 </br>
 
 
@@ -410,8 +428,8 @@ Um cronjob é uma tarefa programada que é executada automaticamente em interval
 Para ativar o cronjob, aceda à página de configuração do módulo e ative a opção Habilitar Cron job de Cancelar e salve.
 A página de configuração atualizará e apresentará a URL do cronjob (1), a qual deve ser adicionada ao seu servidor para que este execute o cronjob.
 ![img](https://github.com/josesoaresif/opencartReleaseTest/raw/assets/version4/assets/cronjob_url.png)
-</br>
 
+</br>
 
 
 ## Logs
@@ -419,6 +437,7 @@ A página de configuração atualizará e apresentará a URL do cronjob (1), a q
 Para facilitar a deteção de erros, a extensão Ifthenpay regista os erros ocorridos durante a execução desta. Os logs são então guardados num ficheiro de texto em storage/logs/ifthenpay.log. Para aceder aos logs, no root da pasta storage/ aceda à pasta logs/ e abra o ficheiro ifthenpay.log.
 
 Nota: A localização da pasta storage é definida após a instalação do Opencart, e pode ser diferente para cada instalação.
+
 </br>
 
 
@@ -427,6 +446,7 @@ Nota: A localização da pasta storage é definida após a instalação do Openc
 O seguinte descreve a experiência do utilizador consumidor ao usar os métodos de pagamento da Ifthenpay numa instalação "stock" do Opencart 4, esta pode mudar com a adição de extensões de one-page-checkout.
 
 Na página de checkout, após escolher o método de envio, o consumidor pode escolher o método de pagamento.
+
 </br>
 
 
@@ -443,8 +463,8 @@ Clicar em Confirmar Encomenda (1).
 Será exibida a página de sucesso da encomenda, com a entidade, referência e o valor a pagar.
 Nota: no caso de attribuir uma conta Multibanco estática ou Multibanco com Referências Dinâmicas mas sem definir validade, não será exibido o tempo limite para pagamento.
 ![img](https://github.com/josesoaresif/opencartReleaseTest/raw/assets/version4/assets/payment_return_multibanco.png)
-</br>
 
+</br>
 
 
 ## Pagar encomenda com Payshop
@@ -459,6 +479,7 @@ Clicar em Confirmar Encomenda (1).
 
 Será exibida a página de sucesso da encomenda, com a referência, validade e o valor a pagar.
 ![img](https://github.com/josesoaresif/opencartReleaseTest/raw/assets/version4/assets/payment_return_payshop.png)
+
 </br>
 
 
@@ -502,6 +523,7 @@ Quando ocorre um erro ou atinge o tempo limite, ou recusa o pagamento na App MB 
 
 Se na configuração do método de pagamento MB WAY estiver ativa a opção de não exibir o contador, o consumidor receberá uma notificação na App MB WAY, mas não será exibido o contador nem o botão de reenviar notificação na página de sucesso de encomenda.
 ![img](https://github.com/josesoaresif/opencartReleaseTest/raw/assets/version4/assets/payment_return_mbway_no_countdown.png)
+
 </br>
 
 
@@ -523,6 +545,7 @@ Preencher os dados do cartão de crédito número do cartão (1), data de valida
 
 Após o pagamento ser processado, será exibida a página de sucesso da encomenda.
 ![img](https://github.com/josesoaresif/opencartReleaseTest/raw/assets/version4/assets/payment_return.png)
+
 </br>
 
 
