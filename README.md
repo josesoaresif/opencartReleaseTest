@@ -1,142 +1,137 @@
-# Atenção
-O seguinte manual foi criado para a versão 4.0.0 do módulo Ifthenpay, indicado para o Opencart 4.
-A extensão ifthenpay compatível com o Opencart 3 continua disponível para download, mas não é contemplada neste manual.
+# Attention
+The following manual was created for version 4.0.0 of the ifthenpay extension, designed for Opencart 4.
+The ifthenpay extension compatible with Opencart 3 is still available for download, but it is not covered in this manual.
 
 
-Download de versões da extensão Ifthenpay para Opencart
-|                                             | Opencart 3 [3.0.1.1 - 3.0.3.8]                                                                        | Opencart 4 [4.0.0.1 - 4.0.2.1] |
-|---------------------------------------------|-------------------------------------------------------------------------------------------------------|--------------------------------|
-| Link para descarregar instalador .ocmod.zip | [ifthenpay v1.3.5](https://github.com/ifthenpay/opencart/releases/download/1.1.7/ifthenpay.ocmod.zip) | [ifthenpay v4.0.0](https://github.com/ifthenpay/opencart/releases/download/4.0.0/ifthenpay.ocmod.zip)           |
+Download versions of the ifthenpay extension for Opencart.
+|                                       | Opencart 3 [3.0.1.1 - 3.0.3.8]                                                                        | Opencart 4 [4.0.0.1 - 4.0.2.1]                                                                        |
+|---------------------------------------|-------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------|
+| Link to download installer .ocmod.zip | [ifthenpay v1.3.5](https://github.com/ifthenpay/opencart/releases/download/1.1.7/ifthenpay.ocmod.zip) | [ifthenpay v4.0.0](https://github.com/ifthenpay/opencart/releases/download/4.0.0/ifthenpay.ocmod.zip) |
 
 </br>
 </br>
 
-# Módulo de pagamentos Ifthenpay Opencart 4
+# Ifthenpay payment extension for Opencart 4
 
 Ler em ![Português](https://github.com/ifthenpay/opencart/raw/assets/assets/img/pt.png) [Português](README.pt.md), e ![Inglês](https://github.com/ifthenpay/opencart/raw/assets/assets/img/en.png) [Inglês](README.md)
 
-[1. Introdução](#introdução)
+[1. Introduction](#introduction)
 
-[2. Compatibilidade](#compatibilidade)
+[2. Compatibility](#compatibility)
 
-[3. Instalação](#instalação)
+[3. Installation](#installation)
 
-[4. Configuração](#configuração)
-  * [Chave Backoffice](#chave-backoffice)
+[4. Configuration](#configuration)
+  * [Backoffice Key](#backoffice-key)
   * [Multibanco](#multibanco)
-  * [Multibanco com Referências Dinâmicas](#multibanco-com-referências-dinâmicas)
+  * [Multibanco with Dynamic References](#multibanco-with-dynamic-references)
   * [MB WAY](#mb-way)
-  * [Cartão de Crédito](#cartão-de-crédito)
+  * [Credit Card](#credit-card)
   * [Payshop](#payshop)
 
-[5. Devoluções](#devoluções)
+[5. Refund](#refund)
 
-
-[6. Outros](#outros)
-  * [Requerer criação de conta adicional](#requerer-criação-de-conta-adicional)
-  * [Limpeza de Configuração](#limpeza-de-configuração)
+[6. Other](#other)
+  * [Support](#support)
+  * [Request additional account](#request-additional-account)
+  * [Reset Configuration](#reset-configuration)
   * [Callback](#callback)
-  * [Testar Callback](#testar-callback)
+  * [Test Callback](#test-callback)
   * [Cronjob](#cronjob)
   * [Logs](#logs)
 
 
-[7. Experiência do Utilizador Consumidor](#experiência-do-utilizador-consumidor)
-  * [Pagar encomenda com Multibanco](#pagar-encomenda-com-multibanco)
-  * [Pagar encomenda com Payshop](#pagar-encomenda-com-payshop)
-  * [Pagar encomenda com MB WAY](#pagar-encomenda-com-mb-way)
-  * [Pagar encomenda com Credit Card](#pagar-encomenda-com-cartão-de-crédito)
+[7. Customer usage experience](#customer-usage-experience)
+  * [Paying order with Multibanco](#paying-order-with-multibanco)
+  * [Paying order with Payshop](#paying-order-with-payshop)
+  * [Paying order with MB WAY](#paying-order-with-mb-way)
+  * [Paying order with Credit Card](#paying-order-with-credit-card)
 
 
 </br>
 
-# Introdução
-![Ifthenpay](https://ifthenpay.com/images/all_payments_logo_final.png)
-**This is the Ifthenpay plugin for Opencart e-commerce platform**
+# Introduction
+![ifthenpay](https://ifthenpay.com/images/all_payments_logo_final.png)
+**This is the ifthenpay extension for the Opencart ecommerce platform.**
 
-**Multibanco** é um método de pagamento que permite ao consumidor pagar com referência bancária.
-Este módulo permite gerar referências de pagamento que o consumidor pode usar para pagar a sua encomenda numa caixa multibanco ou num serviço online de Home Banking. Este plugin usa a Ifthenpay, uma das várias gateways disponíveis em Portugal.
+**Multibanco** is a Portuguese payment method that allows the consumer to pay through a bank reference. This extension enables the generation of payment references that the consumer can use to pay for their order at an ATM (Multibanco) or through an online home banking service. This extension utilizes ifthenpay, one of the various available gateways in Portugal.
 
-**MB WAY** é a primeira solução inter-bancos que permite a compra e transferência imediata por via de smartphone e tablet.
-Este módulo permite gerar um pedido de pagamento ao smartphone do consumidor, e este pode autorizar o pagamento da sua encomenda na aplicação MB WAY. Este plugin usa a Ifthenpay, uma das várias gateways disponíveis em Portugal.
+**MB WAY** is the first inter-bank solution that enables immediate purchases and transfers through smartphones and tablets. This extension allows generating a payment request on the consumer's smartphone, and they can authorize the payment for their order through the MB WAY application. This extension utilizes ifthenpay, one of the various available gateways in Portugal.
 
-**Payshop** é um método de pagamento que permite ao consumidor pagar com referência payshop.
-Este módulo permite gerar uma referência de pagamento que o consumidor pode usar para pagar a sua encomenda num agente Payshop ou CTT. Este plugin usa a Ifthenpay, uma das várias gateways disponíveis em Portugal.
+**Payshop** is a Portuguese payment method that allows the consumer to pay with a Payshop reference. This extension enables the generation of a payment reference that the consumer can use to pay for their order at a Payshop agent or CTT (Portuguese postal service). This extension uses ifthenpay, one of the various gateways available in Portugal.
 
-**Cartão de Crédito** Este módulo permite gerar um pagamento por Visa ou Master card, que o consumidor pode usar para pagar a sua encomenda. Este plugin usa a Ifthenpay, uma das várias gateways disponíveis em Portugal.
+**Credit Card** This extension allows generating a payment through Visa or MasterCard, which the consumer can use to pay for their order. This extension uses ifthenpay, one of the various gateways available in Portugal.
 
-**É necessário contrato com a Ifthenpay**
+**Contract with Ifthenpay is required**
 
-Mais informações em [Ifthenpay](https://ifthenpay.com). 
+See more at [ifthenpay](https://ifthenpay.com). 
 
-Adesão em [Adesão Ifthenpay](https://www.ifthenpay.com/aderir/).
+Membership at [Membership ifthenpay](https://www.ifthenpay.com/aderir/).
 
-**Suporte**
+**Support**
 
-Para suporte, por favor crie um ticked para suporte em [Suporte Ifthenpay](https://helpdesk.ifthenpay.com/).
+For support, please create a support ticket at [Support ifthenpay](https://helpdesk.ifthenpay.com/).
 
 </br>
 
-# Compatibilidade
+# Compatibility
 
-Use a tabela abaixo para verificar a compatibilidade do módulo Ifthenpay com a sua loja online.
+Use the table below to check the compatibility of the Ifthenpay extension with your online store:
 |                           | Opencart 3 [3.0.1.1 - 3.0.3.8] | Opencart 4 [4.0.0.1 - 4.0.2.1] |
 |---------------------------|--------------------------------|--------------------------------|
-| Ifthenpay v1.0.0 - v1.1.7 | Compatível                     | Não compatível                 |
-| Ifthenpay v4.0.0          | Não compatível                 | Compatível                     |
+| ifthenpay v1.0.0 - v1.1.7 | Compatible                     | Not compatible                 |
+| ifthenpay v4.0.0          | Not compatible                 | Compatible                     |
 
 </br>
 
 
-# Instalação
-
-Descarregue o ficheiro de instalação da extensão Ifthenpay para Opencart 4 na página do github [ifthenpay v4.0.0](https://github.com/ifthenpay/opencart/releases/download/4.0.0/ifthenpay.ocmod.zip).
+# Installation
+Please download the installation file of the ifthenpay extension for Opencart 4 from the GitHub page [ifthenpay v4.0.0](https://github.com/ifthenpay/opencart/releases/download/4.0.0/ifthenpay.ocmod.zip).
 ![img](https://github.com/josesoaresif/opencartReleaseTest/raw/assets/version4/assets/github_release_download.png)
 </br>
 
-Aceda ao backoffice da sua loja online e escolha Extensões (1) -> Instalador (2), e clique em Upload (3).
+Access the backoffice of your online store and select Extensions (1) -> Installer (2), then click on Upload (3).
 ![img](https://github.com/josesoaresif/opencartReleaseTest/raw/assets/version4/assets/upload_ocmodzip.png)
 </br>
 
-Selecione o ficheiro .ocmod.zip (1) que descarregou anteriormente, e clique em abrir (2).
+Select the file with the .ocmod.zip extension (1) that you previously downloaded, and click on Open (2).
 ![img](https://github.com/josesoaresif/opencartReleaseTest/raw/assets/version4/assets/select_ocmodzip.png)
 </br>
 
-Se o upload for bem-sucedido, será exibida uma mensagem de sucesso e o módulo será listado no grupo de extensões instaladas, mas apenas carregou a extensão, ainda necessita de instalar esta, par tal clique no botão de instalar (1).
+If the upload is successful, a success message will be displayed, and the extension will be listed in the group of installed extensions. However, you've only uploaded the extension; you still need to install it. To do this, click on the Install button (1).
 ![img](https://github.com/josesoaresif/opencartReleaseTest/raw/assets/version4/assets/ocmodzip_uploaded.png)
 </br>
 
-Se a instalação for bem-sucedida, será exibida uma mensagem de sucesso e o botão de instalar mudará de cor para laranja.
+If the installation is successful, a success message will be displayed, and the Install button will change color to orange.
 ![img](https://github.com/josesoaresif/opencartReleaseTest/raw/assets/version4/assets/ocmodzip_installed.png)
 </br>
 
 
-Após instalar a extensão, é necessário instalar os métodos de pagamento que pretende disponibilizar na sua loja online.
-Escolha Extensões (1) -> Extensões (2) -> Payments (3).
+After installing the extension, you need to set up the payment methods you want to offer in your online store. To do this, access the payment extensions page.
+Select Extensions (1) -> Extensions (2) -> Payments (3).
 ![img](https://github.com/josesoaresif/opencartReleaseTest/raw/assets/version4/assets/extensions_payments.png)
 </br>
 
-Clique em "Install" (1) no método de pagamento que pretende disponibilizar na sua loja online (exemplo Multibanco).
+Find the payment method you want to install (e.g., Multibanco) and click on "Install" (1).
 ![img](https://github.com/josesoaresif/opencartReleaseTest/raw/assets/version4/assets/install_method.png)
 
 </br>
 
 
-# Configuração
+# Configuration
 
-Após instalar o método de pagamento, é necessário configurar este com os dados da sua conta Ifthenpay.
-Click em "Editar" (1) no método de pagamento que pretende configurar (exemplo Multibanco).
+After installing the payment method, you need to configure it using your ifthenpay account details.
+Click on "Edit" (1) for the payment method you want to configure (e.g., Multibanco).
 ![img](https://github.com/josesoaresif/opencartReleaseTest/raw/assets/version4/assets/click_configure.png)
 
 </br>
 
 
-## Chave Backoffice
+## Backoffice Key
 
-Cada configuração de método de pagamento requer a introdução da chave de backoffice para carregar as contas disponíveis.
-A Chave Backoffice é dada na conclusão do contrato e é constituída por conjuntos de quatro algarismos separados por um traço (-).
-Abaixo é apresentado o exemplo do Multibanco, esta ação é igual para os restantes métodos de pagamento.
-Introduza a Chave de Backoffice (1) e clique em salvar (2), a página irá carregar novamente apresentando o formulário de configuração.
+Each payment method configuration requires entering the Backoffice Key to load the available accounts. The Backoffice Key is provided upon contract completion and consists of sets of four digits separated by a hyphen (-).
+Below is an example for Multibanco, and this action is the same for other payment methods as well.
+Enter the Backoffice Key (1) and click on Save (2). The page will reload, displaying the configuration form again.
 ![img](https://github.com/josesoaresif/opencartReleaseTest/raw/assets/version4/assets/config_save_backofficekey.png)
 
 </br>
@@ -144,98 +139,102 @@ Introduza a Chave de Backoffice (1) e clique em salvar (2), a página irá carre
 
 ## Multibanco
 
-O método de pagamento Multibanco, gera referências por algoritmo e é usado se não desejar atribuir um tempo limite (em dias) para encomendas pagas com Multibanco.
-A Entidade e Sub-Entidade são carregadas automáticamente, na introdução da Chave Backoffice.
-Configure o método de pagamento, a imagem abaixo mostra um exemplo de configuração minimamente funcional.
+The Multibanco payment method generates references using an algorithm and is used if you don't want to set a time limit (in days) for orders paid with Multibanco.
+The Entity and Sub-Entity are automatically loaded upon entering the Backoffice Key.
+Configure the payment method. The image below shows an example of a minimally functional configuration.
 
-1. **Estado** - Ativa o método de pagamento, exibindo-o no checkout da sua loja;
-2. **Ativar Callback** - Ao ativar, o estado da encomenda será atualizado quando o pagamento for recebido;
-3. **Habilitar Cron job de Cancelar** - Ao ativar, permite que o cronjob de cancelamento de encomendas execute neste método em especifico (utilizado quando não deseja que o cronjob execute em todos os métodos de pagamento);
-4. **Entidade** - Selecionar uma Entidade. Apenas pode selecionar uma das Entidades associadas à Chave Backoffice;
-5. **Subentidade** - Selecionar uma Sub-Entidade. Apenas pode selecionar uma das Sub-Entidades associadas à Entidade escolhida anteriormente;
-6. **Título** - Título que aparece ao consumidor no checkout;
-7. **Estado Pendente** - Estado de encomenda usado na confirmação da encomenda;
-8. **Estado Pago** - Estado de encomenda usado quando é recebido confirmação de pagamento;
-9. **Estado Cancelado** - Estado de encomenda usado quando a encomenda é cancelada;
-10. **Zona Geo** - (opcional) Ao selecionar uma zona, apenas exibe este método de pagamento para encomendas com morada de envio pertencentes à zona selecionada;
-11. **Valor Mínimo** - (opcional) Apenas exibe este método de pagamento para encomendas com valor superior ao valor inserido;
-12. **Valor Máximo** - (opcional) Apenas exibe este método de pagamento para encomendas com valor inferior ao valor inserido;
-13. **Ordenação** - (opcional) Ordena os métodos de pagamento na página de checkout de forma ascendente. Número mais baixo toma o primeiro lugar.
+1. **Status** - Activates the payment method, displaying it at the checkout of your store.
+2. **Enable Callback** - When enabled, the order status will be updated when the payment is received.
+3. **Enable Cancel Cron Job** - When enabled, allows the order cancellation cron job to run for this specific method (used when you don't want the cron job to run for all payment methods).
+4. **Entity** - Select an Entity. You can only choose one of the Entities associated with the Backoffice Key.
+5. **Sub-entity** - Select a Sub-Entity. You can only choose one of the Sub-Entities associated with the Entity chosen earlier.
+6. **Title** - The title that appears to the consumer during checkout.
+7. **Pending Status** - Order status used during order confirmation.
+8. **Paid Status** - Order status used when payment confirmation is received.
+9. **Cancelled Status** - Order status used when the order is canceled.
+10. **Geo Zone** - (optional) By selecting a geographic zone, this payment method will only be displayed for orders with a shipping address within the chosen zone.
+11. **Minimum Amount** - (optional) Displays this payment method only for orders with a value greater than the entered amount.
+12. **Maximum Amount** - (optional) Displays this payment method only for orders with a value lower than the entered amount.
+13. **Sort Order** - (optional) Sorts the payment methods on the checkout page in ascending order. Lower numbers take the first position.
 
-Clicar em salvar (14) para guardar as alterações.
+Click on Save (14) to save the changes.
 ![img](https://github.com/josesoaresif/opencartReleaseTest/raw/assets/version4/assets/config_multibanco.png)
 
 </br>
 
 
-## Multibanco com Referências Dinâmicas
-O método de pagamento Multibanco com Referências Dinâmicas, gera referências por pedido e é usado se desejar atribuir um tempo limite (em dias) para encomendas pagas com Multibanco.
-A Entidade e Chave Multibanco são carregadas automáticamente, na introdução da Chave Backoffice.
-Configure o método de pagamento, a imagem abaixo mostra um exemplo de configuração minimamente funcional.
+## Multibanco with Dynamic References
 
-Seguir os passos da configuração do Multibanco com a seguinte alteração:
+The Multibanco payment method with Dynamic References generates references per order and is used if you wish to set a time limit (in days) for orders paid with Multibanco.
+The Entity and Multibanco Key are automatically loaded upon entering the Backoffice Key.
+Configure the payment method. The image below shows an example of a minimally functional configuration.
 
-1. **Entidade** - Selecionar "Referências Dinâmicas de Multibanco", esta entidade só estará disponível para seleção se tiver efetuado contrato para criação de conta Multibanco com Referências Dinâmicas;
-2. **Chave Multibanco** - Selecionar uma Chave Multibanco. Apenas pode selecionar uma das Chaves Multibanco associadas à Entidade escolhida anteriormente;
-3. **Validade** - Selecionar o número de dias de validade da referência Multibanco. Ao deixar vazio, a referência Multibanco não expira.
+Follow the steps for configuring Multibanco (as indicated above) with the following change:
 
-Exemplos de validades:
- - escolhendo Validade de 0 dias, se uma encomenda for criada 22/03/2023 às 15:30, a referência Multibanco gerada expirá 22/03/2023 às 23:59, ou seja no fim do dia em que foi gerada;
- - escolhendo Validade de 1 dia, se uma encomenda for criada 22/03/2023 às 9:30, a referência Multibanco gerada expirá 23/03/2023 às 23:59, ou seja a referência Multibanco será válida durante o dia em que foi gerada mais 1 dia;
- - escolhendo Validade de 3 dias, se uma encomenda for criada 22/03/2023 às 20:30, a referência Multibanco gerada expirá 25/03/2023 às 23:59, ou seja a referência Multibanco será válida durante o dia em que foi gerada mais 2 dias;
+1. **Entity** - Select "Dynamic Multibanco References," this entity will only be available for selection if you've entered into a contract for the creation of a Dynamic Multibanco References account.
+2. **Multibanco Key** - Select a Multibanco Key. You can only choose one of the Multibanco Keys associated with the Entity chosen earlier.
+3. **Deadline** - Select the number of days the Multibanco reference will be valid. Leaving this field empty will mean that the Multibanco reference does not expire.
 
-Clicar em salvar (4) para guardar as alterações.
+
+Examples of deadlines:
+- Choosing a deadline of 0 days: If an order is created on 22/03/2023 at 15:30, the generated Multibanco reference will expire on 22/03/2023 at 23:59, which is the end of the day it was generated.
+- Choosing a deadline of 1 day: If an order is created on 22/03/2023 at 9:30, the generated Multibanco reference will expire on 23/03/2023 at 23:59, which means the Multibanco reference will be valid for the day it was generated plus 1 day.
+- Choosing a deadline of 3 days: If an order is created on 22/03/2023 at 20:30, the generated Multibanco reference will expire on 25/03/2023 at 23:59, which means the Multibanco reference will be valid for the day it was generated plus 3 days.
+
+Click on Save (4) to save the changes.
 ![img](https://github.com/josesoaresif/opencartReleaseTest/raw/assets/version4/assets/config_multibanco_dynamic.png)
 
 </br>
 
 
 ## MB WAY
-O método de pagamento MB WAY, usa um número de telemóvel dado pelo consumidor e gera um pedido de pagamento à aplicação MB WAY do smartphone deste, a qual pode aceitar ou recusar.
-As Chaves MB WAY  são carregadas automáticamente, na introdução da Chave Backoffice.
-Configure o método de pagamento, a imagem abaixo mostra um exemplo de configuração minimamente funcional.
 
-1. **Estado** - Ativa o método de pagamento, exibindo-o no checkout da sua loja;
-2. **Ativar Callback** - Ao ativar, o estado da encomenda será atualizado quando o pagamento for recebido;
-3. **Exibir Contagem Decrescente no Checkout** - Ao ativar, exibe a contagem decrescente do tempo limite para pagamento na página de sucesso da encomenda. Desative se encontrar conflitos com módulos de one page checkout;
-4. **Habilitar Reembolso em Vendas/Encomendas** - Ao habilitar, adiciona uma tab de reembolso na página de detalhes de encomenda no backoffice admin que permite a um administrador da loja online devolver o valor parcial ou total, pago pelo consumidor;
-5. **Habilitar Cron job de Cancelar** - Ao ativar, permite que o cronjob de cancelamento de encomendas execute neste método em especifico (utilizado quando não deseja que o cronjob execute em todos os métodos de pagamento);
-6. **Chave MB WAY** - Selecionar uma Chave. Apenas pode selecionar uma das Chaves associadas à Chave Backoffice;
-7. **Título** - Título que aparece ao consumidor no checkout;
-8. **Estado Pendente** - Estado de encomenda usado na confirmação da encomenda;
-9. **Estado Pago** - Estado de encomenda usado quando é recebido confirmação de pagamento;
-10. **Estado Cancelado** - Estado de encomenda usado quando a encomenda é cancelada;
-11. **Estado Reembolsado** - Estado de encomenda usado quando é reembolsado parte ou total do valor da encomenda;
-12. **Zona Geo** - (opcional) Ao selecionar uma zona, apenas exibe este método de pagamento para encomendas com morada de envio pertencentes à zona selecionada;
-13. **Valor Mínimo** - (opcional) Apenas exibe este método de pagamento para encomendas com valor superior ao valor inserido;
-14. **Valor Máximo** - (opcional) Apenas exibe este método de pagamento para encomendas com valor inferior ao valor inserido;
-15. **Ordenação** - (opcional) Ordena os métodos de pagamento na página de checkout de forma ascendente. Número mais baixo toma o primeiro lugar.
+The MB WAY payment method utilizes a mobile phone number provided by the consumer and generates a payment request within the MB WAY smartphone application. The consumer can then accept or decline the payment.
+The MB WAY Keys are automatically loaded upon entering the Backoffice Key.
+Configure the payment method. The image below shows an example of a minimally functional configuration.
 
-Clicar em salvar (16) para guardar as alterações.
+1. **Status** - Activates the payment method, displaying it at the checkout of your store.
+2. **Enable Callback** - When enabled, the order status will be updated when the payment is received.
+3. **Display Countdown Timer on Checkout** - When enabled, displays the countdown timer for payment time limit on the order success page. Disable if conflicts arise with one-page checkout extensions.
+4. **Enable Refund in Sales/Orders** - When enabled, adds a refund tab to the order details page in the admin back office, allowing the online store administrator to partially or fully refund the amount paid by the consumer.
+5. **Enable Cancel Cron Job** - When enabled, allows the order cancellation cron job to run for this specific method (used when you don't want the cron job to run for all payment methods).
+6. **MB WAY Key** - Select a Key. You can only choose one of the Keys associated with the Backoffice Key.
+7. **Title** - The title that appears to the consumer during checkout.
+8. **Pending Status** - Order status used during order confirmation.
+9. **Paid Status** - Order status used when payment confirmation is received.
+10. **Cancelled Status** - Order status used when the order is canceled.
+11. **Refunded Status** - Order status used when part or all of the order amount is refunded.
+12. **Geo Zone** - (optional) By selecting a geographic zone, this payment method will only be displayed for orders with a shipping address within the chosen zone.
+13. **Minimum Amount** - (optional) Displays this payment method only for orders with a value greater than the entered amount.
+14. **Maximum Amount** - (optional) Displays this payment method only for orders with a value lower than the entered amount.
+15. **Sort Order** - (optional) Sorts the payment methods on the checkout page in ascending order. Lower numbers take the first position.
+
+Click on Save (16) to save the changes.
 ![img](https://github.com/josesoaresif/opencartReleaseTest/raw/assets/version4/assets/config_mbway.png)
 
 </br>
 
 
-## Cartão de Crédito
-O método de pagamento Cartão de Crédito, permite pagar com cartão de crédito Visa ou Mastercard através da gateway Ifthenpay.
-As Chaves Ccard são carregadas automáticamente, na introdução da Chave Backoffice.
-Configure o método de pagamento, a imagem abaixo mostra um exemplo de configuração minimamente funcional.
+## Credit Card
 
-1. **Estado** - Ativa o método de pagamento, exibindo-o no checkout da sua loja;
-2. **Habilitar Reembolso em Vendas/Encomendas** - Ao habilitar, adiciona uma tab de reembolso na página de detalhes de encomenda no backoffice admin que permite a um administrador da loja online devolver o valor parcial ou total, pago pelo consumidor;
-3. **Chave Cartão de Crédito** - Selecionar uma Chave. Apenas pode selecionar uma das Chaves associadas à Chave Backoffice;
-4. **Título** - Título que aparece ao consumidor no checkout;
-5. **Estado Pendente** - Estado de encomenda usado na confirmação da encomenda;
-6. **Estado Pago** - Estado de encomenda usado quando é recebido confirmação de pagamento;
-7. **Estado Cancelado** - Estado de encomenda usado quando a encomenda é cancelada;
-8. **Estado Reembolsado** - Estado de encomenda usado quando é reembolsado parte ou total do valor da encomenda;
-9. **Zona Geo** - (opcional) Ao selecionar uma zona, apenas exibe este método de pagamento para encomendas com morada de envio pertencentes à zona selecionada;
-10. **Valor Mínimo** - (opcional) Apenas exibe este método de pagamento para encomendas com valor superior ao valor inserido;
-11. **Valor Máximo** - (opcional) Apenas exibe este método de pagamento para encomendas com valor inferior ao valor inserido;
-12. **Ordenação** - (opcional) Ordena os métodos de pagamento na página de checkout de forma ascendente. Número mais baixo toma o primeiro lugar.
+The Credit Card payment method allows payment with Visa or Mastercard through the ifthenpay gateway.
+The Credit Card Keys are automatically loaded upon entering the Backoffice Key.
+Configure the payment method. The image below shows an example of a minimally functional configuration.
 
-Clicar em salvar (13) para guardar as alterações.
+1. **Status** - Activates the payment method, displaying it at the checkout of your store.
+2. **Enable Refund in Sales/Orders** - When enabled, adds a refund tab to the order details page in the admin back office, allowing an online store administrator to partially or fully refund the amount paid by the consumer.
+3. **Credit Card Key** - Select a Key. You can only choose one of the Keys associated with the Backoffice Key.
+4. **Title** - The title that appears to the consumer during checkout.
+5. **Pending Status** - Order status used during order confirmation.
+6. **Paid Status** - Order status used when payment confirmation is received.
+7. **Cancelled Status** - Order status used when the order is canceled.
+8. **Refunded Status** - Order status used when part or all of the order amount is refunded.
+9. **Geo Zone** - (optional) By selecting a geographic zone, this payment method will only be displayed for orders with a shipping address within the chosen zone.
+10. **Minimum Amount** - (optional) Displays this payment method only for orders with a value greater than the entered amount.
+11. **Maximum Amount** - (optional) Displays this payment method only for orders with a value lower than the entered amount.
+12. **Sort Order** - (optional) Sorts the payment methods on the checkout page in ascending order. Lower numbers take the first position.
+
+Click on Save (13) to save the changes.
 ![img](https://github.com/josesoaresif/opencartReleaseTest/raw/assets/version4/assets/config_ccard.png)
 
 </br>
@@ -243,113 +242,121 @@ Clicar em salvar (13) para guardar as alterações.
 
 ## Payshop
 
-O método de pagamento Payshop, gera uma referência que pode ser paga em qualquer agente payshop ou loja aderente.
-As Chaves Payshop  são carregadas automáticamente, na introdução da Chave Backoffice.
-Configure o método de pagamento, a imagem abaixo mostra um exemplo de configuração minimamente funcional.
+The Payshop payment method generates a reference that can be paid at any Payshop agent or affiliated store.
+The Payshop Keys are automatically loaded upon entering the Backoffice Key.
+Configure the payment method. The image below shows an example of a minimally functional configuration.
 
-1. **Estado** - Ativa o método de pagamento, exibindo-o no checkout da sua loja;
-2. **Ativar Callback** - Ao ativar, o estado da encomenda será atualizado quando o pagamento for recebido;
-3. **Habilitar Cron job de Cancelar** - Ao ativar, permite que o cronjob de cancelamento de encomendas execute neste método em especifico (utilizado quando não deseja que o cronjob execute em todos os métodos de pagamento);
-4. **Chave Payshop** - Selecionar uma Chave. Apenas pode selecionar uma das Chaves associadas à Chave Backoffice;
-5. **Validade** - Selecionar o número de dias de validade da referência Payshop. De 1 a 99 dias, deixe vazio se não pretender que expire;
-6. **Título** - Título que aparece ao consumidor no checkout;
-7. **Estado Pendente** - Estado de encomenda usado na confirmação da encomenda;
-8. **Estado Pago** - Estado de encomenda usado quando é recebido confirmação de pagamento;
-9. **Estado Cancelado** - Estado de encomenda usado quando a encomenda é cancelada;
-10. **Zona Geo** - (opcional) Ao selecionar uma zona, apenas exibe este método de pagamento para encomendas com morada de envio pertencentes à zona selecionada;
-11. **Valor Mínimo** - (opcional) Apenas exibe este método de pagamento para encomendas com valor superior ao valor inserido;
-12. **Valor Máximo** - (opcional) Apenas exibe este método de pagamento para encomendas com valor inferior ao valor inserido;
-13. **Ordenação** - (opcional) Ordena os métodos de pagamento na página de checkout de forma ascendente. Número mais baixo toma o primeiro lugar.
+1. **Status** - Activates the payment method, displaying it at the checkout of your store.
+2. **Enable Callback** - When enabled, the order status will be updated when the payment is received.
+3. **Enable Cancel Cron Job** - When enabled, allows the order cancellation cron job to run for this specific method (used when you don't want the cron job to run for all payment methods).
+4. **Payshop Key** - Select a Key. You can only choose one of the Keys associated with the Backoffice Key.
+5. **Deadline** - Select the number of days to deadline for the Payshop reference. From 1 to 99 days, leave empty if you don't want it to expire.
+6. **Title** - The title that appears to the consumer during checkout.
+7. **Pending Status** - Order status used during order confirmation.
+8. **Paid Status** - Order status used when payment confirmation is received.
+9. **Cancelled Status** - Order status used when the order is canceled.
+10. **Geo Zone** - (optional) By selecting a geographic zone, this payment method will only be displayed for orders with a shipping address within the chosen zone.
+11. **Minimum Amount** - (optional) Displays this payment method only for orders with a value greater than the entered amount.
+12. **Maximum Amount** - (optional) Displays this payment method only for orders with a value lower than the entered amount.
+13. **Sort Order** - (optional) Sorts the payment methods on the checkout page in ascending order. Lower numbers take the first position.
 
-Clicar em salvar (14) para guardar as alterações.
+Click on Save (14) to save the changes.
 ![img](https://github.com/josesoaresif/opencartReleaseTest/raw/assets/version4/assets/config_payshop.png)
 
 </br>
 
 
-## Devoluções
+## Refund
 
-Os métodos de pagamento MB WAY e Cartão de Crédito permitem devolução do valor total ou parcial pago pelo consumidor através da tab de reembolso na página de detalhes da encomenda no backoffice da loja.
-Para devolver o valor pago pelo consumidor, é necessário que o método de pagamento tenha a opção "Habilitar Reembolso" ativada e que a encomenda já tenha sido paga.
-Para proceder à devolução do valor pago pelo consumidor, aceda à página de encomendas e clique em detalhes da encomenda desejada.
-(Os passos seguintes são iguais para os métodos de pagamento MB WAY e Cartão de Crédito)
+The MB WAY and Credit Card payment methods allow for full or partial refunds of the amount paid by the consumer through the refund tab on the order details page in the store's admin back office.
+To refund the amount paid by the consumer, it's necessary for the payment method to have the "Enable Refund" option activated and for the order to have already been paid.
+To initiate the refund of the amount paid by the consumer, access the orders page and click on the details of the desired order.
+(The following steps are the same for both the MB WAY and Credit Card payment methods).
 ![img](https://github.com/josesoaresif/opencartReleaseTest/raw/assets/version4/assets/sales_orders.png)
 </br>
 
-No painel do Histórico de encomenda, clique na tab de Reembolso (1).
+In the Order History panel, click on the Refund tab (1).
 ![img](https://github.com/josesoaresif/opencartReleaseTest/raw/assets/version4/assets/order_history.png)
 </br>
 
-1. Preencha o valor a reembolsar, este valor não pode ser superior ao valor da encomenda;
-2. (opcional) Preencha a descrição do reembolso, esta descrição apenas é visível no backoffice da loja e pode ser usada para registar o motivo do reembolso;
-3. Clique em Reembolsar Pagamento para prosseguir com o reembolso.
+1. Fill in the refund amount, which cannot exceed the order amount.
+2. (optional) Fill in the refund description. This description is only visible in the store's back office and can be used to record the reason for the refund.
+3. Click on Refund Payment to proceed with the refund.
 ![img](https://github.com/josesoaresif/opencartReleaseTest/raw/assets/version4/assets/refund_form.png)
 </br>
 
 
-Clique em Confirmar (1).
+Click on Confirm (1).
+</br>
 ![img](https://github.com/josesoaresif/opencartReleaseTest/raw/assets/version4/assets/refund_confirm.png)
 </br>
 
 
-Será enviado um email com um token de segurança (1) para o email do utilizador administrador da loja online que iniciou a devolução.
+An email with a security token (1) will be sent to the email of the administrator user of the online store who initiated the refund.
 ![img](https://github.com/josesoaresif/opencartReleaseTest/raw/assets/version4/assets/refund_token_mail.png)
 </br>
 
-Introduza o token de segurança recebido no email (1) e clique em Confirmar (2).
+Enter the security token received in the email (1) and click on Confirm (2).
 ![img](https://github.com/josesoaresif/opencartReleaseTest/raw/assets/version4/assets/refund_confirm_token.png)
 </br>
 
-Após o sucesso da operação de reembolso, o painel de reembolso será atualizado com o valor total reembolsado (1), e com um histórico de reembolsos (2). O formulário de reembolso será desabilitado (3) assim que o total reembolsado atingir o valor total da encomenda.
+After the successful refund operation, the refund panel will be updated with the total refunded amount (1), and a history of refunds (2). The refund form will be disabled (3) once the total refunded amount reaches the total order value.
 ![img](https://github.com/josesoaresif/opencartReleaseTest/raw/assets/version4/assets/refund_panel_after.png)
 </br>
 
-O valor selecionado será devolvido ao consumidor e o estado da encomenda será atualizado para Reembolsado.
+The selected amount will be refunded to the consumer, and the order status will be updated to Refunded.
 
 </br>
 
 
-# Outros
+# Other
   
- ## Requerer criação de conta adicional
+## Support
+
+On the configuration page of each payment method, you can find a Support button (1) that redirects you to the ifthenpay support page, where you can create a support ticket.
+For your convenience, you can also access this user manual by clicking on the Instructions button (2), which will redirect you to the GitHub page where you can find the user manual.
+![img](https://github.com/josesoaresif/opencartReleaseTest/raw/assets/version4/assets/support.png)
+</br>
+
+ ## Request additional account
 
 
-Se já tem uma conta Ifthenpay, mas não tem contratou um método de pagamento que agora precisa, pode fazer um pedido automático para a Ifthenpay;
-O tempo de resposta para este pedido é de 1 a 2 dias úteis, com a exceção do método de pagamento por Cartão de Crédito que pode exceder este tempo por ser necessário validação.
-Para requerer a criação de uma conta adicional, aceda à página de configurações do método de pagamento que pretende contratar e clique em Requerer nova conta (1).
+If you already have an ifthenpay account but haven't contracted a needed payment method, you can place an automatic request with ifthenpay.
+The response time for this request is 1 to 2 business days, with the exception of the Credit Card payment method, which might exceed this time due to validation requirements.
+To request the creation of an additional account, access the configuration page of the payment method you wish to contract and click on Request ... Account (1).
 ![img](https://github.com/josesoaresif/opencartReleaseTest/raw/assets/version4/assets/request_account.png)
 </br>
 
-No caso de já possuir uma conta Multibanco de referências estáticas e necessitar de uma conta para Multibanco com Referências Dinâmicas, poderá faze-lo na página de configuração do Multibanco clicando no botão de Requerer conta multibanco dinâmica (1) no fundo da página.
+In the case that you already have a Multibanco account with static references and need an account for Multibanco with dynamic references, you can do so on the Multibanco configuration page by clicking on the Request Dynamic Multibanco Account button (1) at the bottom of the page.
 ![img](https://github.com/josesoaresif/opencartReleaseTest/raw/assets/version4/assets/request_account_multibanco_dynamic.png)
 </br>
 
-Ao clicar em requerer nova conta exibirá uma caixa de dialogo na qual pode confirmar a ação clicando em OK (1).
+When you click on Request New Account, a dialog box will appear where you can confirm the action by clicking OK (1).
 ![img](https://github.com/josesoaresif/opencartReleaseTest/raw/assets/version4/assets/confirm_request_account.png)
 </br>
 
-Assim, a equipa da Ifthenpay adicionará o método de pagamento à sua conta, atualizando a lista de métodos de pagamento disponíveis no seu módulo.
+As a result, the ifthenpay team will add the payment method to your account, updating the list of available payment methods in your extension.
 
-IMPORTANTE: Ao pedir uma conta para o método de pagamento por Cartão de Crédito, a equipa da Ifthenpay irá contactá-lo para pedir mais informações sobre a sua loja online e o seu negócio antes de ativar o método de pagamento.
+IMPORTANT: When requesting an account for the Credit Card payment method, the ifthenpay team will contact you to request more information about your online store and your business before activating the payment method.
 
 </br>
 
 
-## Limpeza de Configuração
+## Reset Configuration
 
-Esta funcionalidade permite limpar as configurações do método de pagamento e é útil no seguintes cenários:
- - Se adquiriu uma nova Chave Backoffice e pretende atribuí-la ao seu site, mas já tem uma atualmente atribuída;
- - Se pediu a criação de uma conta adicional por telefone ou ticket e pretende atualizar a lista de métodos de pagamento para usar a nova conta.
- - Se pretende limpar as configurações do método de pagamento para voltar a configurar;
+This functionality allows you to reset the configuration of the payment method and is useful in the following scenarios:
+- If you have acquired a new Backoffice Key and want to assign it to your website, but you already have one currently assigned.
+- If you have requested the creation of an additional account by phone or ticket and want to update the list of payment methods to use the new account.
+- If you want to reset the configuration of the payment method to reconfigure it.
 
-Na configuração do método de pagamento selecionado, clique no botão Limpar Configuração (1) e confirme a ação clicando em OK.
+In the configuration of the selected payment method, click on the Reset Configuration button (1) and confirm the action by clicking OK.
 
-**Atenção, esta ação irá limpar as atuais configurações do método de pagamento**;
+**Attention, this action will clear the current payment method configuration**;
 
 ![img](https://github.com/josesoaresif/opencartReleaseTest/raw/assets/version4/assets/clear_configuration.png)
 </br>
 
-Após limpar a chave de backoffice, ser-lhe-á mais uma vez pedido para inserir a Chave Backoffice;
+After clearing the configuration, you will be prompted to enter the Backoffice Key again.
 ![img](https://github.com/josesoaresif/opencartReleaseTest/raw/assets/version4/assets/cleared_configuration.png)
 
 </br>
@@ -357,57 +364,56 @@ Após limpar a chave de backoffice, ser-lhe-á mais uma vez pedido para inserir 
 
 ## Callback
 
-IMPORTANTE: apenas os métodos de pagamento Multibanco, MB WAY e Payshop permitem ativar o Callback. O cartão de crédito altera o estado da encomenda automáticamente sem utilizar o callback.
+IMPORTANT: Only the Multibanco, MB WAY, and Payshop payment methods allow activating the Callback. The Credit Card method changes the order status automatically without using the Callback.
 
-O Callback é uma funcionalidade que quando ativa, permite que a sua loja receba a notificação de um pagamento bem-sucedido. Ao receber um pagamento com sucesso de uma encomenda, o servidor da ifthenpay comunica com a sua loja, mudando o estado da encomenda para "Em Processamento". Pode usar os pagamentos da Ifthenpay sem ativar o Callback, mas as suas encomendas não atualizaram o estado automaticamente;
+The Callback is a feature that, when enabled, allows your store to receive notifications of successful payments. Upon receiving a successful payment for an order, the ifthenpay server communicates with your store, changing the order status to "Processing." You can use ifthenpay payments without activating the Callback, but your orders won't automatically update their status.
 
-Como mencionado acima em configurações, para ativar o Callback, aceda à página de configurações do módulo e ative a opção Ativar Callback.
-Após salvar as configurações, é executado o processo de associação da sua loja e método de pagamento aos servidores da ifthenpay, e será exibido um novo grupo "Callback" (apenas informativo) que apresenta estado do Callback (1), a chave anti-phishing (2), e a URL do Callback (3).
+As mentioned in the configurations above, to activate the Callback, access the extension's configuration page and enable the "Enable Callback" option. After saving the settings, the process of associating your store and payment method with ifthenpay's servers will run, and a new "Callback" group (for information only) will appear, showing the Callback status (1), the anti-phishing key (2), and the Callback URL (3).
 
-Após ativar o Callback não necessita de tomar mais nenhuma ação, o Callback está ativo e a funcionar.
+After activating the Callback, you don't need to take any further action. The Callback is active and functioning.
 
 ![img](https://github.com/josesoaresif/opencartReleaseTest/raw/assets/version4/assets/callback.png)
 
 </br>
 
 
-## Testar Callback
+## Test Callback
 
-Em cada página de configuração de um método de pagamento (excepto Cartão de Crédito), pode testar a funcionalidade do Callback clicando no botão "Testar Callback". Esta ação irá simular um pagamento bem-sucedido para uma encomenda na sua loja, alterando o estado da mesma. Necessita que o Callback esteja ativo para ter accesso a esta funcionalidade.
+On each payment method configuration page (except for Credit Card), you can test the Callback functionality by clicking the "Test Callback" button. This action will simulate a successful payment for an order in your store, changing its status. You need to have the Callback active to access this functionality.
 
 </br>
 
-**Multibanco**: No backoffice, use os seguintes dados (1) e (2) dos detalhes de pagamento de encomenda
+**Multibanco**: In the backoffice, use the following data (1) and (2) from the order payment details
 ![img](https://github.com/josesoaresif/opencartReleaseTest/raw/assets/version4/assets/test_callback_data_multibanco.png)
 </br>
 
 
-e introduza-os nos respetivos campos (1) e (2) do formulário de teste de callback e clique em Testar (3).
-Nota: a referência Multibanco deve ser inserida sem espaços e o valor, se tiver casas decimais, deve ser separado por um ponto.
+and enter them in the respective fields (1) and (2) of the Callback test form, then click on Test (3).
+Note: The Multibanco reference should be entered without spaces, and the value, if it has decimals, should be separated by a dot.
 ![img](https://github.com/josesoaresif/opencartReleaseTest/raw/assets/version4/assets/test_callback_form_multibanco.png)
 
 </br>
 
 
-**MB WAY**: No backoffice, use os seguintes dados (1) e (2) dos detalhes de pagamento de encomenda
+**MB WAY**: In the backoffice, use the following data (1) and (2) from the order payment details
 ![img](https://github.com/josesoaresif/opencartReleaseTest/raw/assets/version4/assets/test_callback_data_payshop.png)
 </br>
 
 
-e introduza-os nos respetivos campos (1) e (2) do formulário de teste de callback e clique em Testar (3).
-Nota: o valor, se tiver casas decimais, deve ser separado por um ponto.
+and enter them in the respective fields (1) and (2) of the Callback test form, then click on Test (3).
+Note: The value, if it has decimals, should be separated by a dot.
 ![img](https://github.com/josesoaresif/opencartReleaseTest/raw/assets/version4/assets/test_callback_form_payshop.png)
 
 </br>
 
 
-**Payshop**: No backoffice, use os seguintes dados (1) e (2) dos detalhes de pagamento de encomenda
+**Payshop**: In the backoffice, use the following data (1) and (2) from the order payment details
 ![img](https://github.com/josesoaresif/opencartReleaseTest/raw/assets/version4/assets/test_callback_data_payshop.png)
 </br>
 
 
-e introduza-os nos respetivos campos (1) e (2) do formulário de teste de callback e clique em Testar (3).
-Nota: o valor, se tiver casas decimais, deve ser separado por um ponto.
+and enter them in the respective fields (1) and (2) of the Callback test form, then click on Test (3).
+Note: The value, if it has decimals, should be separated by a dot.
 ![img](https://github.com/josesoaresif/opencartReleaseTest/raw/assets/version4/assets/test_callback_form_payshop.png)
 
 </br>
@@ -415,18 +421,18 @@ Nota: o valor, se tiver casas decimais, deve ser separado por um ponto.
 
 ## Cronjob
 
-Um cronjob é uma tarefa programada que é executada automaticamente em intervalos específicos no sistema. O módulo Ifthenpay disponibiliza um cronjob para verificar o estado dos pagamentos, e cancelar encomendas que não foram pagas dentro do tempo limite configurado. A tabela abaixo mostra o tempo limite para cada método de pagamento, o qual o cronjob verifica e cancela as encomendas que não foram pagas dentro do tempo limite. Este tempo limite pode ser configurado apenas para o método de pagamento Multibanco com Referências Dinâmicas e Payshop.
+A cron job is a scheduled task that is automatically executed at specific intervals in the system. The ifthenpay extension provides a cron job to check the payment status and cancel orders that haven't been paid within the configured time limit. The table below shows the time limit for each payment method, which the cron job checks and cancels orders that haven't been paid within the time limit. This time limit can be configured only for the Multibanco with Dynamic References and Payshop payment methods.
 
-| Método de Pagamento | Validade do pagamento       |
-|---------------------|-----------------------------|
-| Multibanco          | não possui                  |
-| Multibanco Dinâmico | Configurável de 1 a n dias  |
-| MB WAY              | 30 minutos                  |
-| Payshop             | Configurável de 1 a 99 dias |
-| Cartão de Crédito   | 30 minutos                  |
+| Payment Method     | Payment Deadline              |
+|--------------------|-----------------------------|
+| Multibanco         | No deadline                   |
+| Dynamic Multibanco | Configurable from 1 to n days |
+| MB WAY             | 30 minutes                  |
+| Payshop            | Configurable from 1 to 99 days |
+| Credit Card        | 30 minutes                  |
 
-Para ativar o cronjob, aceda à página de configuração do módulo e ative a opção Habilitar Cron job de Cancelar e salve.
-A página de configuração atualizará e apresentará a URL do cronjob (1), a qual deve ser adicionada ao seu servidor para que este execute o cronjob.
+To activate the cron job, access the extension's configuration page and enable the "Enable Cancel Cron Job" option, then click on Save.
+The configuration page will update and display the Cron job URL (1), which should be added to your server to execute the cron job.
 ![img](https://github.com/josesoaresif/opencartReleaseTest/raw/assets/version4/assets/cronjob_url.png)
 
 </br>
@@ -434,119 +440,122 @@ A página de configuração atualizará e apresentará a URL do cronjob (1), a q
 
 ## Logs
 
-Para facilitar a deteção de erros, a extensão Ifthenpay regista os erros ocorridos durante a execução desta. Os logs são então guardados num ficheiro de texto em storage/logs/ifthenpay.log. Para aceder aos logs, no root da pasta storage/ aceda à pasta logs/ e abra o ficheiro ifthenpay.log.
+For easier error detection, the ifthenpay extension logs the errors that occur during its execution. The logs are stored in a text file at storage/logs/ifthenpay.log. To access the logs, go to the root of the storage/ folder, navigate to the logs/ folder, and open the ifthenpay.log file.
 
-Nota: A localização da pasta storage é definida após a instalação do Opencart, e pode ser diferente para cada instalação.
-
-</br>
-
-
-# Experiência do Utilizador Consumidor
-
-O seguinte descreve a experiência do utilizador consumidor ao usar os métodos de pagamento da Ifthenpay numa instalação "stock" do Opencart 4, esta pode mudar com a adição de extensões de one-page-checkout.
-
-Na página de checkout, após escolher o método de envio, o consumidor pode escolher o método de pagamento.
+Note: The location of the storage folder is defined after the installation of Opencart and may vary for each installation.
 
 </br>
 
 
-## Pagar encomenda com Multibanco
+# Customer usage experience
 
-Selecionar o método de pagamento Multibanco (1) e clicar em Continuar (2).
+The following describes the consumer user experience when using ifthenpay payment methods on a "stock" installation of Opencart 4. Please note that this experience might change with the addition of one-page checkout extensions.
+
+On the checkout page, after selecting the shipping method, the consumer can choose the payment method.
+
+</br>
+
+
+## Paying order with Multibanco
+
+Select the Multibanco payment method (1) and click on Continue (2).
 ![img](https://github.com/josesoaresif/opencartReleaseTest/raw/assets/version4/assets/select_multibanco.png)
 </br>
 
-Clicar em Confirmar Encomenda (1).
+Click on Confirm Order (1).
 ![img](https://github.com/josesoaresif/opencartReleaseTest/raw/assets/version4/assets/confirm_order_multibanco.png)
 </br>
 
-Será exibida a página de sucesso da encomenda, com a entidade, referência e o valor a pagar.
-Nota: no caso de attribuir uma conta Multibanco estática ou Multibanco com Referências Dinâmicas mas sem definir validade, não será exibido o tempo limite para pagamento.
+The order success page will be displayed, showing the entity, reference, deadline, and the amount to pay.
+Note: In the case of assigning a static Multibanco account or Multibanco with Dynamic References without setting an expiry date, the payment deadline will not be displayed.
 ![img](https://github.com/josesoaresif/opencartReleaseTest/raw/assets/version4/assets/payment_return_multibanco.png)
 
 </br>
 
 
-## Pagar encomenda com Payshop
+## Paying order with Payshop
 
-Selecionar o método de pagamento Payshop (1) e clicar em Continuar (2).
+Select the Payshop payment method (1) and click on Continue (2).
 ![img](https://github.com/josesoaresif/opencartReleaseTest/raw/assets/version4/assets/select_payshop.png)
 </br>
 
-Clicar em Confirmar Encomenda (1).
+Click on Confirm Order (1).
 ![img](https://github.com/josesoaresif/opencartReleaseTest/raw/assets/version4/assets/confirm_order_payshop.png)
 </br>
 
-Será exibida a página de sucesso da encomenda, com a referência, validade e o valor a pagar.
+The order success page will be displayed, showing the reference, deadline, and the amount to pay.
 ![img](https://github.com/josesoaresif/opencartReleaseTest/raw/assets/version4/assets/payment_return_payshop.png)
 
 </br>
 
 
-## Pagar encomenda com MB WAY
+## Paying order with MB WAY
 
-Selecionar o método de pagamento MB WAY (1) e clicar em Continuar (3).
+Select the MB WAY payment method (1) and click on Continue (2).
 ![img](https://github.com/josesoaresif/opencartReleaseTest/raw/assets/version4/assets/select_mbway.png)
 </br>
 
-Preencher o número de telemóvel (1) e clicar em Confirmar Encomenda (2).
+Fill in the mobile phone number (1) and click on Confirm Order (2).
 ![img](https://github.com/josesoaresif/opencartReleaseTest/raw/assets/version4/assets/confirm_order_mbway.png)
 </br>
 
-No caso da configuração de Exibir Contagem estar ativa, será exibida a contagem decrescente do tempo limite para pagamento na página de sucesso da encomenda.
+If the Display Countdown configuration is active, the countdown timer for the payment time limit will be displayed on the order success page.
 ![img](https://github.com/josesoaresif/opencartReleaseTest/raw/assets/version4/assets/payment_return_mbway.png)
 </br>
 
-O contador atualizará automáticamente o estado do pagamento no caso de sucesso, rejeiçao (por parte do utilizador da App MB WAY), expiração do tempo limite ou erro.
-Em caso de sucesso será exibida a mensagem de sucesso.
+The timer will automatically update the payment status in case of success, rejection by the user in the MB WAY app, expiration of the time limit, or an error. In the case of success, a success message will be displayed.
+</br>
 ![img](https://github.com/josesoaresif/opencartReleaseTest/raw/assets/version4/assets/payment_return_mbway_success.png)
 </br>
 
-Em caso de rejeição pelo utilizador será exibida a mensagem de rejeitado.
+In case of rejection by the user, a "rejection" message will be displayed.
+</br>
 ![img](https://github.com/josesoaresif/opencartReleaseTest/raw/assets/version4/assets/payment_return_mbway_rejected.png)
 </br>
 
-Em caso de expiração do tempo será exibida a mensagem de expirado.
+In case of time expiration, an "expired" message will be displayed.
+</br>
 ![img](https://github.com/josesoaresif/opencartReleaseTest/raw/assets/version4/assets/payment_return_mbway_timeout.png)
 </br>
 
 
-Em caso de falha ao comunicar com a App MB WAY ou introdução de um número de telemóvel inválido, será exibida uma mensagem de erro.
+In case of failure to communicate with the MB WAY app or entering an invalid phone number, an "error" message will be displayed.
+</br>
 ![img](https://github.com/josesoaresif/opencartReleaseTest/raw/assets/version4/assets/payment_return_mbway_error.png)
 </br>
 
 
-Quando ocorre um erro ou atinge o tempo limite, ou recusa o pagamento na App MB WAY, o consumidor pode tentar novamente clicando em Reenviar notificação MB WAY.
+When an error occurs, the time limit is reached, or the payment is declined in the MB WAY app, the consumer can try again by clicking on the "Resend MB WAY notification" button.
 ![img](https://github.com/josesoaresif/opencartReleaseTest/raw/assets/version4/assets/payment_return_mbway_resend.png)
 </br>
 
 
-Se na configuração do método de pagamento MB WAY estiver ativa a opção de não exibir o contador, o consumidor receberá uma notificação na App MB WAY, mas não será exibido o contador nem o botão de reenviar notificação na página de sucesso de encomenda.
+If the "Display Countdown" option is not enabled in the MB WAY payment method configuration, the consumer will receive a notification in the MB WAY app, but the countdown and the "Resend MB WAY Notification" button will not be displayed on the order success page.
 ![img](https://github.com/josesoaresif/opencartReleaseTest/raw/assets/version4/assets/payment_return_mbway_no_countdown.png)
 
 </br>
 
 
-## Pagar encomenda com cartão de crédito
+## Paying order with cartão de crédito
 
-Selecionar o método de pagamento Cartão de Crédito (1) e clicar em continuar (2).
+Select the Credit Card payment method (1) and click on Continue (2).
 ![img](https://github.com/josesoaresif/opencartReleaseTest/raw/assets/version4/assets/select_ccard.png)
 </br>
 
-Clicar em Confirmar Encomenda (1).
+Click on Confirm Order (1).
 ![img](https://github.com/josesoaresif/opencartReleaseTest/raw/assets/version4/assets/confirm_order_ccard.png)
 </br>
 
 
-Preencher os dados do cartão de crédito número do cartão (1), data de validade (2), código de segurança (3), Nome no Cartão (4), e clicar em Pagar (5).
-É possível voltar (6), regressando à página de checkout.
+Fill in the credit card details, card number (1), expiration date (2), security code (3), Name on Card (4), and click on Pay (5).
+You can go back (6), returning to the checkout page.
 ![img](https://github.com/josesoaresif/opencartReleaseTest/raw/assets/version4/assets/gateway_ccard.png)
 </br>
 
-Após o pagamento ser processado, será exibida a página de sucesso da encomenda.
-![img](https://github.com/josesoaresif/opencartReleaseTest/raw/assets/version4/assets/payment_return.png)
+After the payment is processed, the order success page will be displayed.
+![img](https://github.com/josesoaresif/opencartReleaseTest/raw/assets/version4/assets/payment_return_ccard.png)
 
 </br>
 
 
-Chegou ao final do manual do módulo Ifthenpay para Opencart 4.
+You have reached the end of the ifthenpay extension manual for Opencart 4.
